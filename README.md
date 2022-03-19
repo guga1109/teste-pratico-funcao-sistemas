@@ -1,5 +1,5 @@
 # Teste Prático - Função Sistemas
-Teste prático da empresa para vaga de desenvolvedor na empresa Função Sistemas.
+Teste prático para vaga de desenvolvedor na empresa Função Sistemas.
 
 - Adicionado o plugin [jQuery Mask](https://igorescobar.github.io/jQuery-Mask-Plugin/) para validação da máscara do CPF.
 - O campo do CPF é salvo formatado.
