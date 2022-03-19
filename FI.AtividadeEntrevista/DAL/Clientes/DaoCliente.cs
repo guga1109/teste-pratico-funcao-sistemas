@@ -19,9 +19,6 @@ namespace FI.AtividadeEntrevista.DAL
         /// <param name="cliente">Objeto de cliente</param>
         internal long Incluir(DML.Cliente cliente)
         {
-            if (VerificarExistencia(cliente.CPF, cliente.Id))
-                throw new Exception($"Já existe um cliente cadastrado com o CPF {cliente.CPF}.");
-
             List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();
             
             parametros.Add(new System.Data.SqlClient.SqlParameter("Nome", cliente.Nome));
@@ -113,9 +110,6 @@ namespace FI.AtividadeEntrevista.DAL
         /// <param name="cliente">Objeto de cliente</param>
         internal void Alterar(DML.Cliente cliente)
         {
-            if (VerificarExistencia(cliente.CPF, cliente.Id))
-                throw new Exception($"Já existe um cliente cadastrado com o CPF {cliente.CPF}.");
-
             List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();
 
             parametros.Add(new System.Data.SqlClient.SqlParameter("Nome", cliente.Nome));
